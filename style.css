@@ -1,1 +1,1934 @@
+@charset "utf-8";
 
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 402px;
+    height: 874px;
+    background: url('./img/idalhomefront.jpg');
+    margin: 0 auto;
+    position: relative;
+}
+
+.main>object {
+    width: auto;
+    height: 80px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.idalmain_soge {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #858585;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.idalmain_soge>p {
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #757575;
+    text-align: center;
+}
+
+.idalmain_soge.active {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.members {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #aad7c4;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    display: grid;
+    grid-template-columns: 201px 201px;
+    grid-template-rows: 234px 80px 80px 80px 80px 80px 80px 80px;
+}
+
+.members.active {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.membersbutton {
+    width: 80px;
+    height: 80px;
+    margin: 30px;
+}
+
+.membersbutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #757575;
+}
+
+.bingong {
+    width: 201px;
+    height: 120px;
+    position: relative;
+}
+
+.bingong>object {
+    width: auto;
+    height: 60px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.heejin {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.heejin>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.heejin>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.hyunjin {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.hyunjin>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.hyunjin>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.haseul {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.haseul>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.haseul>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.yeojin {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.yeojin>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.yeojin>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.vivi {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.vivi>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.vivi>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.kimlip {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.kimlip>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.kimlip>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.jinsoul {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.jinsoul>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.jinsoul>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.choerry {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.choerry>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.choerry>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.eve {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.eve>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.eve>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.chew {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.chew>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.chew>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.gowon {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.gowon>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.gowon>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.olivia {
+    width: 171px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 7px 0px rgb(129, 129, 129);
+}
+
+.olivia>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.olivia>p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+/* 메인들 */
+
+.heejinmain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.heejinbutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.heejinbutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.heejinbutton object {
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+}
+
+.heejinmain.active {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.heejinmain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.heejinmain_iconandname {
+    width: 372px;
+    height: 20px;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.heejinmain_iconandname>object {
+    width: 12px;
+    height: 15px;
+    margin-left: 30px;
+}
+
+.heejinmain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    margin-left: 8px;
+    line-height: 20px;
+    color: #e9e9e9;
+}
+
+.heejinmainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.heejinmainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.heejinmain_animal_img {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.heejinmain_animal_img>object {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: heejin_animal_img 3s ease infinite;
+}
+
+@keyframes heejin_animal_img {
+    0% {
+        top: 0px;
+    }
+
+    66% {
+        top: 0px;
+    }
+
+    74% {
+        top: -3px;
+    }
+
+    82% {
+        top: 0px;
+    }
+
+    90% {
+        top: -3px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+.heejinbutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.178);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    margin-left: 30px;
+}
+
+.heejinbutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* 아래에 버튼 만들기도 */
+/* 현진 메인 */
+.hyunjinmain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.hyunjinbutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.hyunjinbutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.hyunjinbutton object {
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+}
+
+.hyunjinmain.activetwo {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.hyunjinmain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.hyunjinmain_iconandname {
+    width: 372px;
+    height: 26px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.hyunjinmain_iconandname>object {
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.hyunjinmain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 26px;
+    color: #e9e9e9;
+}
+
+.hyunjinmain_iconandname>h3 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 20px;
+    color: #e9e9e9;
+    margin-top: 3px;
+}
+
+.hyunjinmainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.hyunjinmainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.hyunjinmain_animal_img {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.hyunjinbutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 4px 0px #e9e9e9;
+    margin-left: 30px;
+}
+
+.hyunjinbutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* 하슬 메인 */
+.haseulmain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.haseulbutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.haseulbutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.haseulbutton object {
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+}
+
+.haseulmain.activethree {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.haseulmain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.haseulmain_iconandname {
+    width: 372px;
+    height: 26px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.haseulmain_iconandname>object {
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.haseulmain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 26px;
+    color: #e9e9e9;
+}
+
+.haseulmain_iconandname>h3 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 20px;
+    color: #e9e9e9;
+    margin-top: 3px;
+}
+
+.haseulmainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.haseulmainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.haseulmain_animal_img {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.haseulbutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 4px 0px #e9e9e9;
+    margin-left: 30px;
+}
+
+.haseulbutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* 여진 메인 */
+.yeojinmain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.yeojinbutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.yeojinbutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.yeojinbutton object {
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+}
+
+.yeojinmain.activefour {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.yeojinmain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.yeojinmain_iconandname {
+    width: 372px;
+    height: 26px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.yeojinmain_iconandname>object {
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.yeojinmain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 26px;
+    color: #e9e9e9;
+}
+
+.yeojinmain_iconandname>h3 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 20px;
+    color: #e9e9e9;
+    margin-top: 3px;
+}
+
+.yeojinmainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.yeojinmainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.yeojinmain_animal_img {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.yeojinbutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 4px 0px #e9e9e9;
+    margin-left: 30px;
+}
+
+.yeojinbutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* 비비 메인  */
+.vivimain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.vivibutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.vivibutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.vivibutton object {
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+}
+
+.vivimain.activefive {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.vivimain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.vivimain_iconandname {
+    width: 372px;
+    height: 26px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.vivimain_iconandname>object {
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.vivimain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 26px;
+    color: #e9e9e9;
+}
+
+.vivimain_iconandname>h3 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 20px;
+    color: #e9e9e9;
+    margin-top: 3px;
+}
+
+.vivimainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.vivimainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.vivimain_animal_img {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.vivibutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 4px 0px #e9e9e9;
+    margin-left: 30px;
+}
+
+.vivibutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* 김립 메인 kimlip */
+.kimlipmain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.kimlipbutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.kimlipbutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.kimlipbutton object {
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+}
+
+.kimlipmain.activesix {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.kimlipmain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.kimlipmain_iconandname {
+    width: 372px;
+    height: 26px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.kimlipmain_iconandname>object {
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.kimlipmain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 26px;
+    color: #e9e9e9;
+}
+
+.kimlipmain_iconandname>h3 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 20px;
+    color: #e9e9e9;
+    margin-top: 3px;
+}
+
+.kimlipmainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.kimlipmainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.kimlipmain_animal_img {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.kimlipbutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 4px 0px #e9e9e9;
+    margin-left: 30px;
+}
+
+.kimlipbutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* 진솔 메인  */
+.jinsoulmain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.jinsoulbutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.jinsoulbutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.jinsoulbutton object {
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+}
+
+.jinsoulmain.activeseven {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.jinsoulmain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.jinsoulmain_iconandname {
+    width: 372px;
+    height: 26px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.jinsoulmain_iconandname>object {
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.jinsoulmain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 26px;
+    color: #e9e9e9;
+}
+
+.jinsoulmain_iconandname>h3 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 20px;
+    color: #e9e9e9;
+    margin-top: 3px;
+}
+
+.jinsoulmainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.jinsoulmainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.jinsoulmain_animal_img {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.jinsoulbutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 4px 0px #e9e9e9;
+    margin-left: 30px;
+}
+
+.jinsoulbutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* 최리 메인 */
+.choerrymain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.choerrybutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.choerrybutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.choerrybutton object {
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+}
+
+.choerrymain.activeeight {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.choerrymain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.choerrymain_iconandname {
+    width: 372px;
+    height: 26px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.choerrymain_iconandname>object {
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.choerrymain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 26px;
+    color: #e9e9e9;
+}
+
+.choerrymain_iconandname>h3 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 20px;
+    color: #e9e9e9;
+    margin-top: 3px;
+}
+
+.choerrymainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.choerrymainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.choerrymain_animal_img {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.choerrybutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 4px 0px #e9e9e9;
+    margin-left: 30px;
+}
+
+.choerrybutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* 이브 메인 */
+.evemain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.evebutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.evebutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.evebutton object {
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+}
+
+.evemain.activenine {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.evemain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.evemain_iconandname {
+    width: 372px;
+    height: 26px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.evemain_iconandname>object {
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.evemain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 26px;
+    color: #e9e9e9;
+}
+
+.evemain_iconandname>h3 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 20px;
+    color: #e9e9e9;
+    margin-top: 3px;
+}
+
+.evemainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.evemainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.evemain_animal_img {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.evebutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 4px 0px #e9e9e9;
+    margin-left: 30px;
+}
+
+.evebutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* 츄 메인  */
+.chewmain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.chewbutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.chewbutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.chewmain.activeten {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+/* 수정한거 */
+
+.chewmain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.chewmain_iconandname {
+    width: 372px;
+    height: 26px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.chewmain_iconandname>object {
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.chewmain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 26px;
+    color: #e9e9e9;
+}
+
+.chewmainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.chewmainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.chewbutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 4px 0px #e9e9e9;
+    margin-left: 30px;
+}
+
+.chewbutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* 고원 메인 gowon */
+.gowonmain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.gowonbutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.gowonbutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.gowonmain.activeeleven {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.gowonmain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.gowonmain_iconandname {
+    width: 372px;
+    height: 26px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.gowonmain_iconandname>object {
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.gowonmain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 26px;
+    color: #e9e9e9;
+}
+
+.gowonmainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.gowonmainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.gowonbutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 4px 0px #e9e9e9;
+    margin-left: 30px;
+}
+
+.gowonbutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* 올리비야 혜 메인 olivia */
+.oliviamain {
+    position: fixed;
+    top: 0;
+    left: calc(50% + 201px);
+    width: 402px;
+    height: 874px;
+    background-color: #667f74;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.oliviabutton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.oliviabutton>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: #e9e9e9;
+}
+
+.oliviamain.activetwelve {
+    opacity: 1;
+    left: calc(50% - 201px);
+}
+
+.oliviamain img {
+    width: 402px;
+    height: 270px;
+    margin: 0 0 30px 0;
+}
+
+.oliviamain_iconandname {
+    width: 372px;
+    height: 26px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.oliviamain_iconandname>object {
+    width: 26px;
+    height: 26px;
+    margin-left: 30px;
+}
+
+.oliviamain_iconandname>h2 {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    line-height: 26px;
+    color: #e9e9e9;
+}
+
+.oliviamainpp {
+    width: 341px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.oliviamainpp>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    color: #e9e9e9;
+}
+
+.oliviabutton_down {
+    width: 82.01px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 4px 0px #e9e9e9;
+    margin-left: 30px;
+}
+
+.oliviabutton_down>p {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: #e9e9e9;
+    cursor: pointer;
+}
