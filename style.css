@@ -78,11 +78,38 @@
 }
 
 .main>object {
-    width: auto;
-    height: 80px;
+    width: 342px;
+    height: auto;
     position: absolute;
     top: 30px;
     left: 30px;
+    animation: main_logo 3s ease infinite;
+}
+
+@keyframes main_logo {
+    0% {
+        top: 30px;
+    }
+
+    66% {
+        top: 30px;
+    }
+
+    74% {
+        top: 25px;
+    }
+
+    82% {
+        top: 30px;
+    }
+
+    90% {
+        top: 25px;
+    }
+
+    100% {
+        top: 30px;
+    }
 }
 
 .idalmain_soge {
@@ -143,13 +170,10 @@
     margin: 30px;
 }
 
-.membersbutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #757575;
+.membersbutton>object {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
 }
 
 .bingong {
@@ -518,26 +542,18 @@
 
 .heejinbutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.heejinbutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
-}
-
-.heejinbutton object {
-    width: 60px;
-    height: 60px;
+.heejinbutton>object {
+    width: 30px;
+    height: 30px;
     pointer-events: none;
 }
+
 
 .heejinmain.active {
     opacity: 1;
@@ -673,24 +689,15 @@
 
 .hyunjinbutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.hyunjinbutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
-}
-
-.hyunjinbutton object {
-    width: 60px;
-    height: 60px;
+.hyunjinbutton>object {
+    width: 30px;
+    height: 30px;
     pointer-events: none;
 }
 
@@ -795,26 +802,18 @@
 
 .haseulbutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.haseulbutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
-}
-
-.haseulbutton object {
-    width: 60px;
-    height: 60px;
+.haseulbutton>object {
+    width: 30px;
+    height: 30px;
     pointer-events: none;
 }
+
 
 .haseulmain.activethree {
     opacity: 1;
@@ -917,24 +916,15 @@
 
 .yeojinbutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.yeojinbutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
-}
-
-.yeojinbutton object {
-    width: 60px;
-    height: 60px;
+.yeojinbutton>object {
+    width: 30px;
+    height: 30px;
     pointer-events: none;
 }
 
@@ -1039,24 +1029,15 @@
 
 .vivibutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.vivibutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
-}
-
-.vivibutton object {
-    width: 60px;
-    height: 60px;
+.vivibutton>object {
+    width: 30px;
+    height: 30px;
     pointer-events: none;
 }
 
@@ -1161,24 +1142,15 @@
 
 .kimlipbutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.kimlipbutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
-}
-
-.kimlipbutton object {
-    width: 60px;
-    height: 60px;
+.kimlipbutton>object {
+    width: 30px;
+    height: 30px;
     pointer-events: none;
 }
 
@@ -1283,24 +1255,15 @@
 
 .jinsoulbutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.jinsoulbutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
-}
-
-.jinsoulbutton object {
-    width: 60px;
-    height: 60px;
+.jinsoulbutton>object {
+    width: 30px;
+    height: 30px;
     pointer-events: none;
 }
 
@@ -1405,24 +1368,15 @@
 
 .choerrybutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.choerrybutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
-}
-
-.choerrybutton object {
-    width: 60px;
-    height: 60px;
+.choerrybutton>object {
+    width: 30px;
+    height: 30px;
     pointer-events: none;
 }
 
@@ -1527,24 +1481,15 @@
 
 .evebutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.evebutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
-}
-
-.evebutton object {
-    width: 60px;
-    height: 60px;
+.evebutton>object {
+    width: 30px;
+    height: 30px;
     pointer-events: none;
 }
 
@@ -1649,19 +1594,16 @@
 
 .chewbutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.chewbutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
+.chewbutton>object {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
 }
 
 .chewmain.activeten {
@@ -1750,19 +1692,16 @@
 
 .gowonbutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.gowonbutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
+.gowonbutton>object {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
 }
 
 .gowonmain.activeeleven {
@@ -1849,19 +1788,16 @@
 
 .oliviabutton {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 30px;
     cursor: pointer;
 }
 
-.oliviabutton>p {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0;
-    color: #e9e9e9;
+.oliviabutton>object {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
 }
 
 .oliviamain.activetwelve {
