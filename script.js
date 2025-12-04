@@ -186,4 +186,3 @@ olivia.addEventListener('click', () => {
 oliviabutton.addEventListener('click', () => {
     oliviamain.classList.remove('activetwelve'); // 다시 오른쪽으로 이동
 });
-
